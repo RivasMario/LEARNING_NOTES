@@ -62,6 +62,8 @@ set cloud init for each time, and an ssh key, ssd emulation
 
 https://cloud-images.ubuntu.com/minimal/releases/jammy/release/
 
+https://codingpackets.com/blog/proxmox-import-and-use-cloud-images/
+
 has to be .img file
 
 wget https://cloud-images.ubuntu.com/minimal/releases/jammy/release/ubuntu-22.04-minimal-cloudimg-amd64.img
@@ -85,3 +87,6 @@ virt-customize -a ubuntu-22.04.qcow2  --truncate "/etc/machine-id"
 qm importdisk 900 ubuntu-22.04.qcow2 local-lvm
 
 then add drive to the vm in ui
+
+
+ssh -i "C:\Users\Mario\.ssh\UBUNTU_VM_KEY_KUBERNETES" ubuntuuser@192.168.0.25 -v
